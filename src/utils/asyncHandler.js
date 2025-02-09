@@ -2,7 +2,7 @@
 
 // async function try and catch
 const asyncHandler=(fn)=>{
-    async(res,req,next)=>{
+    return async(req,res,next)=>{
         try{
             await fn(req,res,next);
         }catch(error){
@@ -14,4 +14,4 @@ const asyncHandler=(fn)=>{
     }
 }
 
-export {asyncHandler}
+export {asyncHandler} 
